@@ -1,0 +1,35 @@
+{
+  "name": "Cat Button PWA",
+  "short_name": "CatButton",
+  "description": "A simple PWA with a cat button that plays sounds",
+  "start_url": "/cat-button",
+  "scope": "/cat-button",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "games"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "cat.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "cat.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "cat.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}
