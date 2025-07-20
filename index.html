@@ -20,7 +20,6 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            min-height: 50vh;
             background-image: url("cat-paw-background.jpg");
         }
     </style>
@@ -36,6 +35,15 @@
             const audio = new Audio("cat meow.mp3");
             audio.play();
         }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js')
+                .then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            
     </script>
 </body>
 </html>
