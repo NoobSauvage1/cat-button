@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cat-image {
+            width: 66vw;
+            height: auto;
+            object-fit: fill;
+            border-radius: 20px;
+        
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url("cat-paw-background.jpg");
+        }
+    </style>
+    
+</head>
+<body>
+    <button onclick="playMeow()">
+        <img src = "kat afbeelding.jpg" alt="A cute cat" class="cat-image">
+        
+    </button>
+    <script>
+        function playMeow() {
+            const audio = new Audio("cat meow.mp3");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
