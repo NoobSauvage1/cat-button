@@ -3,7 +3,7 @@ const urlsToCache = [
   '/cat-button/',
   '/cat-button/index.html',
   '/cat-button/cat.jpg',
-  '/cat-button/Cat-screaming-sound-effect.mp3'
+  '/cat-button/cat-meow.mp3',
 ];
  
 // Install event - cache resources
