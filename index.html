@@ -59,7 +59,7 @@
         let lastShake = 0;
         window.addEventListener('devicemotion', function(event) {
             const acc = e.acceleration;
-            const threshold = 20; // Adjust this value to change sensitivity
+            const threshold = 10; // Adjust this value to change sensitivity
             const now = Date.now();
             
             if(now - lastShake > 1000 && Math.abs(acc.x) + Math.abs(acc.y) + Math.abs(acc.z) > threshold) {
