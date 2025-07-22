@@ -1,35 +1,35 @@
 {
-  "name": "Cat Button PWA",
-  "short_name": "CatButton",
-  "description": "A simple PWA with a cat button that plays sounds",
-  "start_url": "/cat-button",
-  "scope": "/cat-button",
+  "name": "Sound Efects",
+  "short_name": "FunnySoundEffects",
+  "description": "A simple app that lets you play funny sound effects.",
+  "start_url": "/sound-effects",
+  "scope": "/sound-effects",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "portrait-primary",
-  "categories": ["entertainment", "games"],
+  "categories": ["entertainment", "games", "fun", "funny", "sound effects", "audio"],
   "lang": "en",
   "dir": "ltr",
   "icons": [
     {
-      "src": "cat.jpg",
+      "src": "main-logo.png",
       "sizes": "512x512",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "cat.jpg",
+      "src": "main-logo.png",
       "sizes": "192x192",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any"
     }
   ],
   "screenshots": [
     {
-      "src": "cat.jpg",
+      "src": "main-logo.png",
       "sizes": "any",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }

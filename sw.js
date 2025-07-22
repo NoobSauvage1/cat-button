@@ -1,9 +1,16 @@
-const CACHE_NAME = 'cat-button-pwa-v1';
+const CACHE_NAME = 'sound-effects-v1';
 const urlsToCache = [
   '/cat-button/',
   '/cat-button/index.html',
   '/cat-button/cat.jpg',
   '/cat-button/cat-meow.mp3',
+  '/cat-button/style.css',
+  '/cat-button/script.js',
+  '/cat-button/favicon.ico',
+  '/cat-button/manifest.json',
+  '/cat-button/sw.js',
+  '/cat-button/hub.jpg',
+  '/cat-button/hub-intro.mp3',
 ];
  
 // Install event - cache resources
