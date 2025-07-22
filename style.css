@@ -1,0 +1,23 @@
+
+
+button {
+background-color: transparent;
+border: none;
+cursor: pointer;
+border-radius: 20px;
+}
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+ align-items: center;          
+}
+.cat-image, .hub-image {
+width: 200px;
+height: auto;
+object-fit: cover;
+border-radius: 20px;
+}

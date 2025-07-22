@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cat-button</title>
     <!-- PWA Meta Tags -->
     <meta name="description" content="A simple PWA with a cat button that plays sounds">
     <meta name="theme-color" content="#000000">
@@ -18,42 +18,26 @@
     <!-- Favicon and Apple Touch Icon -->
     <link rel="icon" href="cat.jpg" type="image/jpeg">
     <link rel="apple-touch-icon" href="cat.jpg">
-    <style>
-        .cat-image {
-            width: 66vw;
-            height: auto;
-            object-fit: fill;
-            border-radius: 20px;
-        
-        }
-        button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            min-height: 100vh;
-           display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
-            
-            
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
     
 </head>
 <body>
-    <button onclick="playMeow()">
+    
+    <button onclick="playMeow()" class="sound-button">
         <img src = "cat.jpg" alt="A cute cat" class="cat-image">
-        
+    </button>
+    <button onclick="playHub()" class="sound-button">
+        <img src = "hub.png" alt="The hub" class="hub-image">
     </button>
     <script>
         function playMeow() {
             const audio = new Audio("cat-meow.mp3");
+            audio.play();
+        }
+        function playHub() {
+            const audio = new Audio("hub-intro.mp3");
             audio.play();
         }
         if ('serviceWorker' in navigator) {
@@ -66,6 +50,23 @@
                 });
             });
         }
+
+        function playWhip() {
+            const audio = new Audio("whip.mp3");
+            audio.play();
+        }
+
+        let lastShake = 0;
+        window.addEventListener('devicemotion', function(event) {
+            const acc = e.acceleration;
+            const threshold = 20; // Adjust this value to change sensitivity
+            const now = Date.now();
+            
+            if(now - lastShake > 1000 && Math.abs(acc.x) + Math.abs(acc.y) + Math.abs(acc.z) > threshold) {
+                lastShake = now;
+                playWhip();
+            }
+        });
 
     </script>
 </body>
